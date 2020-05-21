@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs -o username=senthil //192.168.85.117/books /home/senthil/Desktop/Windows-Books/
