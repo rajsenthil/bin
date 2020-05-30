@@ -1,0 +1,10 @@
+#!/bin/bash
+cd
+mkdir -p ~/java/apache
+mkdir -p ~/java/jdk/
+mkdir ~/tools
+mkdir ~/git
+mkdir ~/git2
+mkdir ~/tmp
+
+
