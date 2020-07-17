@@ -1,2 +1,9 @@
 #!/bin/bash
-sudo minikube start --driver=none
+minikuebstatus=$(sudo minikube status 2>&1)
+echo $minikuebstatus
+if [[ $minikuebstatus == *"host: Running"* ]]; then
+  echo "minikube already running. Exiting..."
+else
+  echo "Starting minikube with driver=none"
+  sudo minikube start --driver=none
+fi
