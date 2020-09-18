@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo kubectl $suffix delete job.batch/redis-redis-cluster-cluster-create
+sudo kubectl $suffix apply -f /home/senthil/git/kubernetes-microservices/redis/kubernetes/redis-cluster-job.yaml
