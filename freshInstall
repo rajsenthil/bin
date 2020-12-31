@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# 1. install chrome
+#a.
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#b.
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+#c.
+sudo apt-get update
+#d.
+sudo apt-get install google-chrome-stable
+
+# 2. Install tmux
+sudo apt install tmux
+
+# 3. Install Curl
+sudo apt install curl
+
+#4. Install emacs
+sudo apt install emacs
+
+#5. Install ssh
+sudo apt install ssh
+
+#6. Install git
+sudo apt install git
+
+#7. Install conntrack
+sudo apt install conntrack
+
+#8. Manually install intellij
+
+#9. Create java folder
+sudo mkdir -p ~/java/apache
+
+#10. Create tools
+sudo mkdir -p ~/tools
+
+#11. download openjdk 11
+cd ~/Downloads/; curl https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz -o jdk11.tar.gz
+
+#12. Extract to ~/java folder
+sudo tar -C ~/java/ -zxvf jdk11.tar.gz
+
+#13. download gradle manually
+
+#14. Optional download maven manually
+
+#15. set Path to java, gradle, maven
+export JAVA_DIR=/home/senthil/java
+export JAVA_HOME=$JAVA_DIR/jdk-11
+export GRADLE_HOME=$JAVA_DIR/gradle-6.5.1
+export MAVEN_HOME=$JAVA_DIR/apache/apache-maven-3.6.3
+export PATH=$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin:$MAVEN_HOME/bin
+
+#16. Make git folders for services, ui and core
+mkdir git app ui
+
+
