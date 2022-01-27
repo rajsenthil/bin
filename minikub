@@ -1,11 +1,13 @@
 #!/bin/bash
-minikuebstatus=$(sudo minikube status 2>&1)
+#minikuebstatus=$(sudo minikube status 2>&1)
+minikuebstatus=$(minikube status 2>&1)
 echo $minikuebstatus
 if [[ $minikuebstatus == *"host: Running"* ]]; then
   echo "minikube already running. Exiting..."
 else
   echo "Starting minikube with driver=none"
-  sudo minikube start --driver=none --memory 8192
+  #sudo minikube start --driver=none --memory 8192
+  minikube start --driver=docker --memory 8192
 fi
 
 # minikube start --vm-driver=xhyve --container-runtime=docker --show-libmachine-logs --v=10 --alsologtostderr --cpus 4 --memory 8192
