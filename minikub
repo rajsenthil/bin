@@ -15,4 +15,6 @@ else
 fi
 
 # minikube start --vm-driver=xhyve --container-runtime=docker --show-libmachine-logs --v=10 --alsologtostderr --cpus 4 --memory 8192
+# 2023/01/12: minikube  start --mount --mount-string="/home/senthil/opt:/opt" --driver=kvm2 --me│
+mory=16384 --cpus=6
 
