@@ -10,11 +10,11 @@ else
   #minikube start --driver=docker --memory 8192
   #minikube start --driver=kvm2 --memory 16384 --mount-string="$HOME/git/kubernetes-microservices/:/data" --mount
   #minikube start --driver=kvm2 --memory 8192 --mount-string="$HOME/git/kubernetes-microservices/:/data" --mount
-  minikube  start --mount --mount-string="/home/senthil/data:/data2" --driver=kvm2 --memory=16384 --cpus=4
+  #minikube  start --mount --mount-string="/home/senthil/data:/data2" --driver=kvm2 --memory=16384 --cpus=4
+  minikube  start --mount --mount-string="/home/senthil/data:/data2" --memory=16384 --cpus=4
   #minikube  start mount /home/senthil/data:/data2 --driver=kvm2 --memory=16384 --cpus=4
 fi
 
 # minikube start --vm-driver=xhyve --container-runtime=docker --show-libmachine-logs --v=10 --alsologtostderr --cpus 4 --memory 8192
-# 2023/01/12: minikube  start --mount --mount-string="/home/senthil/opt:/opt" --driver=kvm2 --me│
-mory=16384 --cpus=6
+# 2023/01/12: minikube  start --mount --mount-string="/home/senthil/opt:/opt" --driver=kvm2 --memory=16384 --cpus=6
 
