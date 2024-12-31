@@ -1,16 +1,13 @@
-# Add the following to your .gitconfig file.
+[core]
+  editor = code --wait
 [diff]
-    tool = meld
-[difftool]
-    prompt = false
-[difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
-
-# Add the following to your .gitconfig file.
+  tool = vscode
+[difftool "vscode"]  
+  cmd = code --wait --diff $LOCAL $REMOTE -Y
 [merge]
-    tool = meld
-[mergetool "meld"]
-    # Choose one of these 2 lines (not both!) explained below.
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
-    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
-   
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[difftool]
+	prompt = false
