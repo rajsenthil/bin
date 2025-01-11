@@ -1,2 +1,2 @@
 #!/bin/bash
-git push $1
+git push $1 $2
